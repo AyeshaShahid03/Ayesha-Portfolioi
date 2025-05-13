@@ -1,0 +1,289 @@
+
+import {
+  logo,
+  backend,
+  creator,
+  mobile,
+  web,
+  github,
+  menu,
+  close,
+  css,
+  gearXpert,
+  project2,
+  project3,
+  mysql,
+  express,
+  aws,
+  mui,
+  
+  gsap,
+  framer,
+  figma,
+  git,
+  html,
+  javascript,
+  mongodb,
+  nodejs,
+  reactjs,
+  redux,
+  tailwind,
+  threejs,
+  firstTestimonial,
+  secondTestimonial,
+  thirdTestimonial,
+} from '../assets'
+
+
+// Import Tekisky separately
+import arrow from "../assets/company/arrow.png";
+
+
+export const navLinks = [
+
+
+  {
+    id: "about",
+    title: "About",
+    
+  },
+  {
+    id: "work",
+    title: "Work",
+  },
+  {
+    id: "contact",
+    title: "Contact",
+  },
+];
+
+const services = [
+  {
+    title: "Full-Stack Developer",
+    icon: web,
+  },
+  {
+    title: "Frontend Developer",
+    icon: mobile,
+  },
+  {
+    title: "Backend Developer",
+    icon: backend,
+  },
+  {
+    title: "Shopify",
+    icon: creator,
+  },
+];
+
+const technologies = [
+  {
+    name: "HTML 5",
+    icon: html,
+  },
+  {
+    name: "CSS 3",
+    icon: css,
+  },
+  {
+    name: "JavaScript",
+    icon: javascript,
+  },
+  {
+    name: "React JS",
+    icon: reactjs,
+  },
+  {
+    name: "gsap",
+    icon: gsap,
+  },
+  {
+    name: "framer",
+    icon: framer,
+  },
+
+ 
+  {
+    name: "Three JS",
+    icon: threejs,
+  },
+  {
+    name: "figma",
+    icon: figma,
+  },
+  {
+    name: "Redux Toolkit",
+    icon: redux,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+  {
+    name: "Material Ui",
+    icon: mui,
+  },
+  {
+    name: "Node JS",
+    icon: nodejs,
+  },
+  {
+    name: "Express Js",
+    icon: express,
+  },
+  {
+    name: "AWS",
+    icon: aws,
+  },
+  {
+    name: "MongoDB",
+    icon: mongodb,
+  },
+  {
+    name: "MySql",
+    icon: mysql,
+  },
+
+  {
+    name: "git",
+    icon: git,
+  },
+ 
+
+];
+
+const experiences = [
+  {
+    title: "Full-Stack Developer",
+    company_name: "Solo Developer Freelancer",
+    icon: arrow, 
+    iconBg: "#383E56",
+    date: "June 2022 - Jan 2025",
+    points: [
+      "Developing and maintaining web applications using MERN stack technologies independently.",
+      "Collaborating with designers, product managers, and other stakeholders to create high-quality products from start to finish.",
+      "Implementing responsive design and ensuring cross-browser compatibility for seamless user experiences.",
+      "Managing the entire development cycle, including code reviews, testing, and deployment, to ensure product quality.",
+    ],
+  },
+  
+  {
+    title: "CEO @ Zolixi",
+    company_name: "Zolixi",
+    icon: arrow,
+    iconBg: "#383E56",
+    date: "Feb 2025 - present",
+    points: ["Leading Zolixi as co Founder & CEO while actively developing and maintaining web applications using MERN stack technologies.",
+
+"Overseeing project planning and collaborating with clients and team members to deliver high-quality, scalable digital solutions.",
+
+"Implementing responsive, pixel-perfect designs with a strong focus on performance and cross-browser compatibility.",
+
+"Managing the full development cycle — from backend integration to testing and deployment — ensuring seamless and timely project delivery."
+    ],
+  },
+];
+
+const testimonials = [
+  {
+    testimonial:
+      "I thought it was impossible to make a website as beautiful as our product, but Huzaif proved me wrong.",
+    name: "MD Mustaqeem",
+    designation: "Ecommerce",
+    company: "QuickMart",
+    image: firstTestimonial,
+  },
+  {
+    testimonial:
+      "I've never met a web developer who truly cares about their clients' success like Huzaif does.",
+    name: "Abdul Raheman",
+    designation: "Ecommerce Business",
+    company: "justbuyz",
+    image: secondTestimonial,
+  },
+  {
+    testimonial:
+      "After Huzaif optimized our website, our traffic increased by 50%. We can't thank them enough!",
+    name: "James Wang",
+    designation: "CTO",
+    company: "456 Enterprises",
+    image: thirdTestimonial,
+  },
+];
+
+const projects = [
+  {
+    name: " BeHappyGoLeafy",
+    description:
+      "BeHappyGoLeafy is a sleek, user-friendly website promoting a healthy, plant-based lifestyle. It features plant-based products, recipes, and wellness tips, offering a simple and engaging experience for those looking to live sustainably.",
+      tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "white-text-gradient",
+      },
+      {
+        name: "node",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+ 
+    ],
+    image: project2,
+    source_code_link: "https://behappygoleafy.com/",
+  },
+  {
+    name: "Wedding Sparklers Now",
+    description:
+      "Wedding Sparklers Now is a beautifully designed e-commerce platform offering high-quality wedding sparklers and celebration products. With a clean layout, smooth navigation, and secure checkout, it ensures a seamless shopping experience for customers planning special events.",
+        tags: [
+      {
+        name: "NextJs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Stripe (forPayment)",
+        color: "green-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: gearXpert,
+    source_code_link: "https://weddingsparklersnow.com/",
+  },
+  {
+    name: " Greenlight",
+    description:
+      "Greenlight is a cutting-edge platform designed to help parents and kids manage finances together. Offering a secure, intuitive way to manage allowances, track spending, and set financial goals, it empowers families to develop financial literacy. The website is built using Node.js, ensuring fast and scalable performance, with seamless integration for real-time updates and secure transactions.",
+      tags: [
+      {
+        name: "NodeJs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "express",
+        color: "white-text-gradient",
+      },
+      {
+        name: "Git/Github",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+    ],
+    image: project3,
+    source_code_link: "https://greenlight.com/",
+  },
+];
+
+export { services, technologies, experiences, testimonials, projects };
