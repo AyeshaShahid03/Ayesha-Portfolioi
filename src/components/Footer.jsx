@@ -18,9 +18,6 @@ const Footer = () => {
       >
         <FaGithub size={24} />
       </a>
-      {/* <a href="https://twitter.comhttps://x.com/HuzaifDev" target="_blank" rel="noopener noreferrer">
-        <FaXTwitter size={24} />
-      </a> */}
       <a
         href="https://www.linkedin.com/in/ayesha-shahid-6b884a28a/"
         target="_blank"
