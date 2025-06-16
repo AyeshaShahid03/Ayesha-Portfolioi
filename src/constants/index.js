@@ -9,7 +9,7 @@ import {
   menu,
   close,
   css,
-  gearXpert,
+  globaljet,
   project2,
   project3,
   mysql,
@@ -239,10 +239,10 @@ const projects = [
     source_code_link: "https://behappygoleafy.com/",
   },
   {
-    name: "Wedding Sparklers Now",
+    name: "Global Jet",
     description:
-      "Wedding Sparklers Now is a beautifully designed e-commerce platform offering high-quality wedding sparklers and celebration products. With a clean layout, smooth navigation, and secure checkout, it ensures a seamless shopping experience for customers planning special events.",
-        tags: [
+      "Global Jet is a luxury aviation company website that showcases premium private jet charter services, aircraft sales, and management solutions. The site reflects a high-end aesthetic with elegant design, smooth transitions, and an intuitive user experience tailored for elite clientele.",
+   tags: [
       {
         name: "NextJs",
         color: "blue-text-gradient",
@@ -256,8 +256,8 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: gearXpert,
-    source_code_link: "https://weddingsparklersnow.com/",
+    image: globaljet,
+    source_code_link: "https://globaljet.aero/en",
   },
   {
     name: " Greenlight",
