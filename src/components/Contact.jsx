@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -27,41 +26,47 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "Ayesha Shahid",
-          from_email: form.email,
-          to_email: "ayeshaashii20g@gmail.com",
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+    try {
+      // Create FormData for the API request
+      const formData = new FormData();
+      formData.append('name', form.name);
+      formData.append('email', form.email);
+      formData.append('message', form.message);
+      formData.append('source', 'ayesha'); // Add source as "ayesha"
 
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
+      // Make API call to Zolixi contact endpoint
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: formData,
+      });
 
-          alert("Ahh, something went wrong. Please try again.");
-        }
-      );
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+
+      if (result.success) {
+        setLoading(false);
+        alert("Thank you. I will get back to you as soon as possible.");
+
+        setForm({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        throw new Error(result.error || 'Something went wrong');
+      }
+    } catch (error) {
+      setLoading(false);
+      console.error('Error submitting form:', error);
+      alert("Ahh, something went wrong. Please try again.");
+    }
   };
 
   return (

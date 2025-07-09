@@ -12,12 +12,10 @@
     "deploy": "gh-pages -d dist --depth=1"
   },
   "dependencies": {
-    "@emailjs/browser": "^3.10.0",
     "@gsap/react": "^2.1.2",
     "@heroicons/react": "^2.2.0",
     "@react-three/drei": "^9.56.24",
     "@react-three/fiber": "^8.11.1",
-    "email-js": "^2.0.3",
     "framer-motion": "^9.0.7",
     "gsap": "^3.12.7",
     "maath": "^0.5.2",
