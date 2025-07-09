@@ -38,8 +38,14 @@ const Contact = () => {
       formData.append('message', form.message);
       formData.append('source', 'ayesha'); // Add source as "ayesha"
 
+      // Determine API URL based on environment
+      const isDevelopment = import.meta.env.DEV;
+      const apiUrl = isDevelopment 
+        ? '/api/contact' // Use proxy in development
+        : 'https://www.zolixi.com/api/contact'; // Use full URL in production
+
       // Make API call to Zolixi contact endpoint
-      const response = await fetch('/api/contact', {
+      const response = await fetch(apiUrl, {
         method: 'POST',
         body: formData,
       });
