@@ -15,6 +15,7 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   const handleChange = (e) => {
     const { target } = e;
@@ -58,7 +59,7 @@ const Contact = () => {
 
       if (result.success) {
         setLoading(false);
-        alert("Thank you. I will get back to you as soon as possible.");
+        setShowSuccessModal(true);
 
         setForm({
           name: "",
@@ -140,6 +141,55 @@ const Contact = () => {
       >
         <EarthCanvas />
       </motion.div>
+
+      {/* Success Modal */}
+      {showSuccessModal && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+          onClick={() => setShowSuccessModal(false)}
+        >
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.8, opacity: 0 }}
+            className="bg-tertiary p-8 rounded-2xl max-w-md mx-4 text-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="mb-6">
+              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg
+                  className="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-white text-xl font-bold mb-2">
+                Message Sent Successfully!
+              </h3>
+              <p className="text-secondary text-sm">
+                Thank you for reaching out. I will get back to you as soon as possible.
+              </p>
+            </div>
+            <button
+              onClick={() => setShowSuccessModal(false)}
+              className="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-opacity-80 transition-all duration-200"
+            >
+              Close
+            </button>
+          </motion.div>
+        </motion.div>
+      )}
     </div>
   );
 };
