@@ -41,7 +41,7 @@ const Contact = () => {
 
       // Determine API URL based on environment
       const isDevelopment = import.meta.env.DEV;
-      const apiUrl = isDevelopment 
+      const apiUrl = isDevelopment
         ? '/api/contact' // Use proxy in development
         : 'https://www.zolixi.com/api/contact'; // Use full URL in production
 
@@ -178,13 +178,13 @@ const Contact = () => {
             initial={{ scale: 0.8, opacity: 0, y: 30, rotateX: -15 }}
             animate={{ scale: 1, opacity: 1, y: 0, rotateX: 0 }}
             exit={{ scale: 0.8, opacity: 0, y: 30, rotateX: -15 }}
-            transition={{ 
-              type: "spring", 
-              damping: 20, 
+            transition={{
+              type: "spring",
+              damping: 20,
               stiffness: 300,
               duration: 0.6
             }}
-            className="relative bg-gradient-to-br from-black-100 via-black-100 to-tertiary border border-secondary/30 p-10 rounded-3xl max-w-lg mx-4 text-center shadow-2xl backdrop-blur-sm"
+            className="relative bg-gradient-to-br from-black-100 via-black-100 to-tertiary border border-secondary/30 p-6 rounded-3xl max-w-lg mx-4 mt-28 text-center shadow-2xl backdrop-blur-sm"
             onClick={(e) => e.stopPropagation()}
             style={{
               boxShadow: "0 25px 50px -12px rgba(145, 94, 255, 0.25), 0 0 0 1px rgba(145, 94, 255, 0.1)"
@@ -192,35 +192,35 @@ const Contact = () => {
           >
             {/* Animated border glow */}
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#915EFF]/20 via-transparent to-[#915EFF]/20 opacity-0 animate-pulse" />
-            
+
             {/* Corner decorative elements */}
             <div className="absolute top-6 left-6 w-3 h-3 rounded-full bg-gradient-to-r from-[#915EFF] to-[#915EFF]/60 opacity-80 animate-pulse" />
             <div className="absolute top-6 right-6 w-3 h-3 rounded-full bg-gradient-to-r from-[#915EFF] to-[#915EFF]/60 opacity-80 animate-pulse" style={{ animationDelay: "0.5s" }} />
             <div className="absolute bottom-6 left-6 w-3 h-3 rounded-full bg-gradient-to-r from-[#915EFF] to-[#915EFF]/60 opacity-80 animate-pulse" style={{ animationDelay: "1s" }} />
             <div className="absolute bottom-6 right-6 w-3 h-3 rounded-full bg-gradient-to-r from-[#915EFF] to-[#915EFF]/60 opacity-80 animate-pulse" style={{ animationDelay: "1.5s" }} />
-            
+
             <div className="relative mb-10">
               {/* Enhanced success icon with multiple layers */}
               <div className="relative w-24 h-24 mx-auto mb-8">
                 {/* Outer glow ring */}
-                <motion.div 
+                <motion.div
                   className="absolute inset-0 rounded-full bg-gradient-to-r from-[#915EFF] via-[#915EFF]/80 to-[#915EFF] opacity-20"
                   animate={{ rotate: 360 }}
                   transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
                 />
-                
+
                 {/* Middle glow */}
                 <div className="absolute inset-2 bg-gradient-to-r from-[#915EFF]/40 to-[#915EFF]/20 rounded-full blur-md" />
-                
+
                 {/* Main icon container */}
-                <motion.div 
+                <motion.div
                   className="relative w-full h-full bg-gradient-to-br from-[#915EFF] via-[#915EFF]/90 to-[#915EFF]/70 rounded-full flex items-center justify-center shadow-2xl"
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 400 }}
                 >
                   {/* Inner glow */}
                   <div className="absolute inset-2 bg-gradient-to-br from-white/20 to-transparent rounded-full" />
-                  
+
                   {/* Checkmark icon */}
                   <motion.svg
                     className="w-12 h-12 text-white relative z-10"
@@ -240,20 +240,20 @@ const Contact = () => {
                   </motion.svg>
                 </motion.div>
               </div>
-              
+
               {/* Enhanced title with animated gradient */}
-              <motion.h3 
-                className="text-white text-3xl font-black mb-4 bg-gradient-to-r from-white via-[#915EFF] to-secondary bg-clip-text text-transparent"
+              <motion.h3
+                className="text-white text-2xl font-black mb-4 bg-gradient-to-r from-white via-[#915EFF] to-secondary bg-clip-text text-transparent"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8, duration: 0.6 }}
               >
                 Message Sent!
               </motion.h3>
-              
+
               {/* Enhanced subtitle with better typography */}
-              <motion.p 
-                className="text-secondary text-lg leading-relaxed max-w-sm mx-auto"
+              <motion.p
+                className="text-secondary leading-relaxed max-w-sm mx-auto"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.6 }}
@@ -261,7 +261,7 @@ const Contact = () => {
                 Thank you for reaching out. I'll get back to you as soon as possible with a detailed response.
               </motion.p>
             </div>
-            
+
             {/* Enhanced close button with multiple states */}
             <motion.button
               onClick={() => setShowSuccessModal(false)}
@@ -274,7 +274,7 @@ const Contact = () => {
             >
               {/* Button background animation */}
               <div className="absolute inset-0 bg-gradient-to-r from-[#915EFF]/80 to-[#915EFF]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              
+
               {/* Button text */}
               <span className="relative z-10 flex items-center justify-center gap-2">
                 <motion.span
