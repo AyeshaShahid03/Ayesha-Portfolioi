@@ -14,6 +14,10 @@ import globaljet from './globaljet.png';
 import project3 from './project3.webp';
 import project2 from './proj1.webp'
 import mysql from './tech/mysql.png';
+import typescript from './tech/typescript.png';
+import postgresql from './tech/postgresql.png';
+import docker from './tech/docker.png';
+import python from './tech/python.png';
 import express from './tech/express.png';
 import aws from './tech/aws.png';
 import mui from './tech/mui.png'
@@ -56,6 +60,10 @@ export {
   git,
   html,
   javascript,
+  python,
+  postgresql,
+  typescript,
+  docker,
   mongodb,
   nodejs,
   reactjs,

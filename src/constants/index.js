@@ -16,7 +16,10 @@ import {
   express,
   aws,
   mui,
-  
+  typescript,
+  postgresql,
+  python,
+  docker,
   gsap,
   framer,
   figma,
@@ -89,6 +92,10 @@ const technologies = [
     name: "JavaScript",
     icon: javascript,
   },
+   {
+    name: "python",
+    icon: python,
+  },
   {
     name: "React JS",
     icon: reactjs,
@@ -101,6 +108,16 @@ const technologies = [
     name: "framer",
     icon: framer,
   },
+   {
+    name: "typescript",
+    icon: typescript,
+  },
+   {
+    name: "docker",
+    icon: docker,
+  },
+  
+  
 
  
   {
@@ -155,7 +172,7 @@ const technologies = [
 const experiences = [
   {
     title: "Full-Stack Developer",
-    company_name: "Solo Developer Freelancer",
+    company_name: "Upwork",
     icon: arrow, 
     iconBg: "#383E56",
     date: "June 2022 - Jan 2025",
