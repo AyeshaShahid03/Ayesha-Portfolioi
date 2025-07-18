@@ -116,10 +116,6 @@ const technologies = [
     name: "docker",
     icon: docker,
   },
-  
-  
-
- 
   {
     name: "Three JS",
     icon: threejs,
